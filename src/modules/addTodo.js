@@ -4,7 +4,7 @@ export const form = document.getElementById('form');
 
 export const getAdded = () => {
   const description = document.getElementById('new-todo').value;
-  if (description != '') {
+  if (description !== '') {
     todo.add(description);
     create();
     form.reset();

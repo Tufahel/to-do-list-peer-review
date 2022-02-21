@@ -21,14 +21,14 @@ export const create = () => {
       if (a.completed === true) {
         checkbox.checked = 'checked';
       }
-
       checkbox.onclick = (e) => {
         todo.completed(e.target.checked, a.index);
       };
-
       descriptionContainer.appendChild(checkbox);
-
       const descript = document.createElement('p');
+      if (a.completed === true) {
+        descript.style.textDecoration = 'line-through';
+      }
       descript.id = 'task-description';
       descript.textContent = a.description;
       descriptionContainer.appendChild(descript);
